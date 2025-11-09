@@ -1,0 +1,11 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="SuiteRunByClass" verbose="1">
+    <test name="FirstTest">
+        <packages>
+            <package name="com.anhtester.bai9_setup_testNG.anhtester"/>
+            <package name="com.anhtester.bai9_setup_testNG.anhtester1"/>
+            <package name="com.anhtester.bai9_setup_testNG.anhtester2"/>
+        </packages>
+    </test>
+</suite>
