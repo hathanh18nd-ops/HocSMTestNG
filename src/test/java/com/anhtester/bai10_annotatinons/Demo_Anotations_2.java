@@ -15,22 +15,22 @@ public class Demo_Anotations_2 {
 //
     @BeforeTest
     public void beforeTest() {
-        System.out.println("Chạy trước tất cả các test trong một thẻ <test> 2");
+        System.out.println("BeforeTest Chạy trước tất cả các test trong một thẻ <test> 2");
     }
 
     @AfterTest
     public void afterTest() {
-        System.out.println("Chạy sau tất cả các test trong một thẻ <test> 2");
+        System.out.println("AfterTest Chạy sau tất cả các test trong một thẻ <test> 2");
     }
 
     @BeforeClass
     public void beforeClass() {
-        System.out.println("Chạy trước tất cả các test trong class này 2");
+        System.out.println("BeforeClass Chạy trước tất cả các test trong class này 2");
     }
 
     @AfterClass
     public void afterClass() {
-        System.out.println("Chạy sau tất cả các test trong class này 2");
+        System.out.println("AfterClass Chạy sau tất cả các test trong class này 2");
     }
 
     @Test
