@@ -1,5 +1,6 @@
 package com.anhtester.bai10_annotatinons;
 
+import com.anhtester.bai10_annotatinons.testcases.Base_Test;
 import org.testng.annotations.*;
 
 public class Demo_Anotations {
@@ -15,12 +16,12 @@ public class Demo_Anotations {
 
     @BeforeTest
     public void beforeTest() {
-        System.out.println("BeforeTest Chạy trước tất cả các test trong một thẻ <test>");
+        System.out.println("BeforeTest Chạy trước tất cả các test trong một thẻ <test> 3");
     }
 
     @AfterTest
     public void afterTest() {
-        System.out.println("AfterTest Chạy sau tất cả các test trong một thẻ <test>");
+        System.out.println("AfterTest Chạy sau tất cả các test trong một thẻ <test> 3");
     }
 
     @BeforeClass
@@ -58,7 +59,7 @@ public class Demo_Anotations {
         System.out.println("This is Login Success Test");
     }
 
-    @Test
+    @Test(groups = {"login"})
     public void test_B_LoginFailed() {
         System.out.println("This is Login Failed Test");
     }

@@ -3,15 +3,12 @@
 <suite name="SuiteRunByClass" verbose="1">
     <groups>
         <run>
-            <include name="smoke"/>
-
+            <include name="login"/>
         </run>
     </groups>
-
-    <test name="FirstTest">
+    <test name="Test">
         <classes>
-            <class name="com.anhtester.bai9_setup_testNG.anhtester.DemoTestNG"/>
-
+            <class name="com.anhtester.bai10_annotatinons.Demo_Anotations"></class>
         </classes>
     </test>
 </suite>
