@@ -1,6 +1,7 @@
 package com.anhtester.bai10_annotatinons.testcases;
 
 import com.anhtester.LocatorCRM;
+import com.anhtester.common.BaseTest;
 import org.openqa.selenium.By;
 import org.testng.annotations.Test;
 

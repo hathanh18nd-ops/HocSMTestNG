@@ -1,4 +1,4 @@
-package com.anhtester.bai10_annotatinons.testcases;
+package com.anhtester.common;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;

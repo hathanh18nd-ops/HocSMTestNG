@@ -1,10 +1,13 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
 
 <suite name="SuiteRunByClass" verbose="1">
+    <parameter name="email" value=""></parameter>
     <test name="FirstTest">
         <classes>
 
-            <class name="com.anhtester.bai10_annotatinons.Demo_Anotations_2"/>
+            <class name="com.anhtester.bai10_annotatinons.Demo_Anotations_2">
+                <parameter name="email" value=""></parameter>
+            </class>
             <class name="com.anhtester.bai10_annotatinons.Demo_Anotations"/>
 
         </classes>

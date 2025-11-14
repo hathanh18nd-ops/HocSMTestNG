@@ -35,7 +35,8 @@ public class Demo_Anotations_2 {
     }
 
     @Test
-    public void test_A_LoginSuccess() {
+    @Parameters(value = {"email", "password"})
+    public void test_A_LoginSuccess(String email, String password) {
         System.out.println("This is Login Success Test 2");
     }
 
