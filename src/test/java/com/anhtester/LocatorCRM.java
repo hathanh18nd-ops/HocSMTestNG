@@ -63,6 +63,8 @@ public class LocatorCRM {
 
     //locator for New Customers Page
     public static String inputCompany = "//input[@id='company']";
+    public static String repuiredFieldCompany = "//p[text()='This field is required.']";////p[@id='company-error']
+    public static String repuiredField = "//p[@id='company-error']";////p[@id='company-error']
     public static String inputVAT = "//input[@id='vat']";
     public static String inputPhone = "//input[@id='phonenumber']";
     public static String inputWebsite = "//input[@id='website']";

@@ -16,26 +16,24 @@ public class TestHardAndSoftAssert extends BaseTest {
 
     @Test(priority = 3)
     public void addNewCustomer() throws InterruptedException {
-        SoftAssert softAssert = new SoftAssert();
         driver.get(LocatorCRM.url);
         driver.findElement(By.xpath(LocatorCRM.inputEmail)).sendKeys("admin@example.com");
         driver.findElement(By.xpath(LocatorCRM.inputPassword)).sendKeys("123456");
         driver.findElement(By.xpath(LocatorCRM.buttonLogin)).click();
         Thread.sleep(2000);
-//        boolean checkDashboard = driver.findElement(By.xpath(LocatorCRM.menuDashboard)).isDisplayed();
         List<WebElement> checkmenuDashboard = driver.findElements(By.xpath(LocatorCRM.menuDashboard));
-//        System.out.println("Số lượng phần tử tìm thấy: " + elements.size());
         Assert.assertTrue(checkmenuDashboard.size() > 0, "Login failed - Đăng nhập không thành công");
         System.out.println("Đăng nhập thành công");
 
         driver.findElement(By.xpath(LocatorCRM.menuCustomers)).click();
         List<WebElement> checkheaderCustomer = driver.findElements(By.xpath(LocatorCRM.headerCustomerPage));
-        Assert.assertTrue(checkheaderCustomer.size() > 0, "Customer page is not displayed - Trang Khách hàng không hiển thị");
+        softAssert.assertTrue(checkheaderCustomer.size() > 0, "Customer page is not displayed - Trang Khách hàng không hiển thị");
         String headerText = driver.findElement(By.xpath(LocatorCRM.headerCustomerPage)).getText();
-        Assert.assertEquals(headerText, "Customers Summary", "Customer page header text does not match - Tiêu đề trang Khách hàng không khớp");
+        softAssert.assertEquals(headerText, "Customers Summary", "Customer page header text does not match - Tiêu đề trang Khách hàng không khớp");
         System.out.println("Trang Khách hàng hiển thị thành công");
         driver.findElement(By.xpath(LocatorCRM.buttonNewCustomer)).click();
         driver.findElement(By.xpath(LocatorCRM.inputCompany)).sendKeys(customerName);
+//        driver.findElement(By.xpath(LocatorCRM.inputCompany));
         driver.findElement(By.xpath(LocatorCRM.inputVAT)).sendKeys("12");
         driver.findElement(By.xpath(LocatorCRM.inputPhone)).sendKeys("0818888888");
         driver.findElement(By.xpath(LocatorCRM.inputWebsite)).sendKeys("hapttest.com");
@@ -62,8 +60,9 @@ public class TestHardAndSoftAssert extends BaseTest {
         Thread.sleep(1000);
         driver.findElement(By.xpath(LocatorCRM.inputSearchCountry)).sendKeys("viet", Keys.ENTER);
         Thread.sleep(1000);
-//        driver.findElement(By.xpath(LocatorCRM.buttonSave)).click();
-        Thread.sleep(2000);
-        softAssert.assertAll();
+        driver.findElement(By.xpath(LocatorCRM.buttonSave)).click();
+        Thread.sleep(1000);
+        List<WebElement> checkrequiredFienld = driver.findElements(By.xpath(LocatorCRM.repuiredField));
+        Assert.assertTrue(checkrequiredFienld.size() > 0, "Chưa nhập trường Company");
     }
 }
