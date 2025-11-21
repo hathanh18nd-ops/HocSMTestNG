@@ -12,15 +12,15 @@ import java.util.List;
 
 public class TestHardAssert extends BaseTest {
     String customerName = "Hapt Test Company 001";
-    @Test(enabled = false)
+    @Test(priority = 1)
     public void testHardAssert() {
 
         driver.get("https://anhtester.com");
 
-        String expectedTitle = "Anh Tester Automation Testing";
+        String expectedTitle = "Anh Tester Automation Testing111";
         String actualTitle = driver.getTitle();
 
-        System.out.println("*** Checking For The Title ***");
+        System.out.println("*** Checking For The Title ***" + driver.getTitle());
 
         Assert.assertEquals(actualTitle, expectedTitle, "Title does not match! (Tiêu đề không khớp!)");
     }

@@ -5,7 +5,7 @@
         <classes>
             <class name="com.anhtester.bai9_setup_testNG.anhtester.DemoTestNG">
                 <methods>
-                    <include name="testCase1"/>
+                    <include name="testC.ase1"/>
                     <include name="testCase2"/>
                 </methods>
             </class>

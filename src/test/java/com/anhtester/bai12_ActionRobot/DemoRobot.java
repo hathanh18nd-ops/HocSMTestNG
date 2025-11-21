@@ -50,9 +50,9 @@ public class DemoRobot extends BaseTest {
 
         Robot robot = new Robot();
         //Di chuyển trỏ chuột đến vị trí x,y
-        robot.mouseMove(1600, 250);// tọa độ con trỏ chuột theo từng màn hình
+        robot.mouseMove(1480, 110);// tọa độ con trỏ chuột theo từng màn hình
         //Dalay giống sleep
-        robot.delay(5000);
+        robot.delay(2000);
         //Click chuột trái
         robot.mousePress(InputEvent.BUTTON1_DOWN_MASK);
         //Thả chuột trái ra

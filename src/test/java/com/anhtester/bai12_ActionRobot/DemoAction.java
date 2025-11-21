@@ -171,7 +171,7 @@ public class DemoAction extends BaseTest {
         inputCourseElement.sendKeys("Selenium");
         Thread.sleep(1000);
         //Ctrl + a để bôi đen
-        action.keyDown(Keys.CONTROL).sendKeys("a").keyUp(Keys.CONTROL).build().perform();
+        action.keyDown(Keys.CONTROL).sendKeys("a").keyUp(Keys.CONTROL).build().perform();//sendKeys("a") vì không có Keys.a
         Thread.sleep(1000);
         //Ctrl + c để copy
         action.keyDown(Keys.CONTROL).sendKeys("c").keyUp(Keys.CONTROL).build().perform();
